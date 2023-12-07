@@ -19,6 +19,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
 
         canvas {
@@ -28,11 +29,31 @@
         video {
             box-shadow: -2px 12px 20px 0px grey;
         }
+
+        .playButton {
+            margin-top: 0.8rem;
+            border-radius: 5px;
+            padding: 1rem;
+            border: none;
+            background-color: rgb(127, 127, 219);
+            color: white;
+        }
+
+        .playButton:hover{
+            color:rgb(127, 127, 219);
+            background-color: white;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Emotional Analysis with computer camera</h1>
+    <h4>Emotional Analysis with your computer camera.</h4>
+    <video id="video" width="720" height="540" autoplay muted></video>
+    <div>
+        <button id="playButton" class="playButton"></button>
+    </div>
 </body>
 
 </html>
